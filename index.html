@@ -1,133 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Swati Udhwani | Resume</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .dark body {
+      background-color: #111827;
+      color: #d1d5db;
+    }
+
+    .profile-photo {
+      border-radius: 9999px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <div id="particles-js"></div>
-    <div class="container">
-      <h1>Swati Udhwani</h1>
-      <p class="subtitle">Finance | Digital Business | Entrepreneurship Aspirant</p>
-      <p class="contact-info">Location: Bhopal, Madhya Pradesh, India<br>Email: swatiudhwani10@gmail.com | Phone: +91-8269032836</p>
-      <a href="SWATI%20RESUME.pdf" download class="btn">Download Resume</a>
-    </div>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-all duration-500">
+
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <!-- Dark Mode Toggle -->
+  <button id="dark-mode-toggle" class="fixed top-4 right-4 z-50 bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition-all">
+    Toggle Dark Mode
+  </button>
+
+  <!-- Header -->
+  <header class="text-center py-20 relative z-10" data-aos="fade-down">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Swati Udhwani</h1>
+    <p class="text-lg md:text-2xl font-medium mb-4">Finance | Digital Business | Entrepreneurship Aspirant</p>
+    <p class="mb-4">📍 Bhopal, Madhya Pradesh, India<br>📧 swatiudhwani10@gmail.com | 📞 +91-8269032836</p>
+    <a href="SWATI%20RESUME.pdf" download class="inline-block mt-6 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full text-lg transition">
+      Download Resume
+    </a>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
+  <!-- Navbar -->
+  <nav class="bg-gray-800 dark:bg-gray-700 sticky top-0 z-40">
+    <ul class="flex justify-center space-x-6 py-4 text-white text-sm md:text-base">
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#education" class="hover:underline">Education</a></li>
+      <li><a href="#projects" class="hover:underline">Projects</a></li>
+      <li><a href="#experience" class="hover:underline">Experience</a></li>
+      <li><a href="#skills" class="hover:underline">Skills</a></li>
     </ul>
   </nav>
 
-  <main>
+  <!-- Main Sections -->
+  <main class="max-w-4xl mx-auto px-6 py-12 space-y-20 relative z-10">
+
     <section id="about" data-aos="fade-up">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <img src="Swati.jpg" alt="Swati Udhwani" class="profile-photo">
-          <p>Motivated and detail-oriented BBA student specialising in Finance, Digital Business, and Entrepreneurship. Strong foundation in financial analysis, e-commerce operations, and digital marketing. Seeking opportunities to contribute to business growth while enhancing my learning in a dynamic, innovation-driven environment.</p>
-        </div>
+      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="Swati.jpg" alt="Swati Udhwani" class="profile-photo shadow-lg">
+        <p class="text-justify">Motivated and detail-oriented BBA student specialising in Finance, Digital Business, and Entrepreneurship. Strong foundation in financial analysis, e-commerce operations, and digital marketing. Seeking opportunities to contribute to business growth while enhancing my learning in a dynamic, innovation-driven environment.</p>
       </div>
     </section>
 
-    <section id="education" data-aos="fade-up" data-aos-delay="200">
-      <div class="container">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>BBA in Finance</strong> - Barkatullah University Bhopal (2023 - 2026)</li>
-          <li><strong>BBA in Digital Business</strong> - IIM Bangalore (2024 - 2027)</li>
-          <li><strong>10th</strong> - Kendriya Vidyalaya Bairagarh (2021) 87.6%</li>
-          <li><strong>12th</strong> - Kendriya Vidyalaya Bairagarh (2023) 83.8%</li>
-        </ul>
-      </div>
+    <section id="education" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-3xl font-bold mb-6 text-center">Education</h2>
+      <ul class="list-disc list-inside space-y-3">
+        <li><strong>BBA in Finance</strong> - Barkatullah University Bhopal (2023 - 2026)</li>
+        <li><strong>BBA in Digital Business</strong> - IIM Bangalore (2024 - 2027)</li>
+        <li><strong>10th</strong> - Kendriya Vidyalaya Bairagarh (2021) 87.6%</li>
+        <li><strong>12th</strong> - Kendriya Vidyalaya Bairagarh (2023) 83.8%</li>
+      </ul>
     </section>
 
-    <section id="projects" data-aos="fade-up" data-aos-delay="400">
-      <div class="container">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Financial Strategy Report:</strong> Executed an in-depth financial project involving balance sheet creation, ratio analysis, WACC computation, and capital budgeting (NPV & IRR). Designed a diversified investment portfolio with risk-return assessment. Developed a financial strategy plan focusing on cost control, investment analysis, and profitability forecasting.</li>
-        </ul>
-      </div>
+    <section id="projects" data-aos="fade-up" data-aos-delay="200">
+      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+      <ul class="list-disc list-inside space-y-3">
+        <li><strong>Financial Strategy Report:</strong> Executed an in-depth financial project involving balance sheet creation, ratio analysis, WACC computation, capital budgeting (NPV & IRR), and diversified portfolio strategy.</li>
+      </ul>
     </section>
 
-    <section id="experience" data-aos="fade-up" data-aos-delay="600">
-      <div class="container">
-        <h2>Experience</h2>
-        <ul>
-          <li><strong>Intern</strong> at Onprice Infotech Pvt. Ltd., Bhopal (Jan 2024 – Feb 2024): Completed an academic internship focused on e-commerce operations and digital marketplace management. Gained practical exposure to online product listing, customer communication, and backend e-commerce operations.</li>
-          <li><strong>Intern</strong> at Versatile Marketing Agency, Bhopal (Dec 2024 – Feb 2025): Completed hands-on training in digital marketing strategies including SEO, social media marketing, and content marketing. Helped execute real-time marketing campaigns and analysed digital performance using basic analytics tools.</li>
-        </ul>
-      </div>
+    <section id="experience" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-3xl font-bold mb-6 text-center">Experience</h2>
+      <ul class="list-disc list-inside space-y-3">
+        <li><strong>Intern - Onprice Infotech Pvt. Ltd., Bhopal</strong> (Jan 2024 – Feb 2024): Hands-on exposure in e-commerce operations and marketplace backend management.</li>
+        <li><strong>Intern - Versatile Marketing Agency, Bhopal</strong> (Dec 2024 – Feb 2025): Worked on SEO, social media marketing, campaign execution, and performance tracking.</li>
+      </ul>
     </section>
 
-    <section id="volunteering" data-aos="fade-up" data-aos-delay="700">
-      <div class="container">
-        <h2>Volunteering</h2>
-        <ul>
-          <li><strong>Cadet Volunteer – Robin Hood Army, Bhopal Chapter:</strong> Participated in food distribution drives and academy activities to support underprivileged communities. Contributed to team-led outreach programs and social welfare initiatives aimed at community development and hunger relief.</li>
-        </ul>
-      </div>
+    <section id="skills" data-aos="fade-up" data-aos-delay="400">
+      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+        <li>Financial Analysis</li>
+        <li>Digital Marketing</li>
+        <li>E-Commerce Operations</li>
+        <li>Strategic Planning</li>
+        <li>Budgeting & Reporting</li>
+        <li>Excel & PowerPoint</li>
+        <li>Google Analytics (Basic)</li>
+        <li>Team Collaboration</li>
+        <li>Problem-Solving</li>
+      </ul>
     </section>
 
-    <section id="skills" data-aos="fade-up" data-aos-delay="800">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul>
-          <li>Financial Analysis & Planning</li>
-          <li>Digital Marketing (SEO, Social Media)</li>
-          <li>E-Commerce Operations</li>
-          <li>Strategic Business Planning</li>
-          <li>Budgeting and Financial Reporting</li>
-          <li>MS Excel (Formulas, Basic Data Analysis)</li>
-          <li>MS PowerPoint (Presentations, Reports)</li>
-          <li>Google Analytics (Beginner)</li>
-          <li>Communication & Team Collaboration</li>
-          <li>Problem-Solving and Critical Thinking</li>
-        </ul>
-      </div>
-    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Swati Udhwani. All rights reserved.</p>
-    </div>
+  <!-- Footer -->
+  <footer class="text-center py-8 text-sm text-gray-400">
+    &copy; 2025 Swati Udhwani. All rights reserved.
   </footer>
 
-  <button id="dark-mode-toggle" class="btn">Toggle Dark Mode</button>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- AOS and Particles Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init();
+    AOS.init({
+      once: true,
+      duration: 1000,
     });
-
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-      }
-    });
-
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-    }
 
     particlesJS('particles-js', {
       "particles": {
@@ -137,7 +150,7 @@
         "opacity": {"value": 0.5,"random": true},
         "size": {"value": 3,"random": true},
         "line_linked": {"enable": true,"distance": 150,"color": "#ffffff","opacity": 0.4,"width": 1},
-        "move": {"enable": true,"speed": 4,"out_mode": "out"}
+        "move": {"enable": true,"speed": 2,"out_mode": "out"}
       },
       "interactivity": {
         "events": {
@@ -151,6 +164,22 @@
       },
       "retina_detect": true
     });
+
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
   </script>
+
 </body>
 </html>
+
